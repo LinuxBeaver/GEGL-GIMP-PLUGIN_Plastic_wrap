@@ -1,6 +1,9 @@
 Plastic Wrap Gimp plugin (Like Adobe Photoshop CS2's Plastic Wrap)
 works in both Gimp 2.10 and Gimp 2.99
 
+Download plugin here.
+https://github.com/LinuxBeaver/Plastic_Wrap_Gimp_Plugin/releases
+
 ![image preview](previews/0.png)
 
 ![image preview](previews/1.png)
