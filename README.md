@@ -23,6 +23,8 @@ Then Restart Gimp and go to GEGL Operations and look for "Plastic Wrap" in the d
 Gimp 2.99.16+ users will find the filter in filters>light and shadow>plastic wrap. 2.10 
 users will only see it in the GEGL operations drop down list.
 
+![image](https://github.com/LinuxBeaver/Plastic_Wrap_Gimp_Plugin/assets/78667207/12085bd7-ef59-4909-b6cd-55b77660032e)
+
 
 ## Compiling and Installing
 
