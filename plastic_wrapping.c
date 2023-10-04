@@ -76,8 +76,8 @@ property_double (azimuth, _("Plastic azimuth"), 3.0)
 
 property_double (elevation, _("Plastic elevation"), 80.0)
    description (_("Emboss elevation for Plastic. Rotate the brightest pixels with this."))
-   value_range (30.0, 80.0)
-   ui_range    (30.0, 80.0)
+   value_range (30.0, 90.0)
+   ui_range    (30.0, 90.0)
    ui_gamma    (3.0)
   ui_steps      (0.1, 0.50)
 
@@ -85,8 +85,8 @@ property_double (elevation, _("Plastic elevation"), 80.0)
 
 property_double (elevation2, _("Faint Plastic elevation"), 20.0)
    description (_("Emboss elevation for a second faint emboss, that makes the plastic look better. This rotates the brightest pixels"))
-   value_range (10.0, 50.0)
-   ui_range    (10.0, 50.0)
+   value_range (10.0, 90.0)
+   ui_range    (10.0, 90.0)
    ui_gamma    (3.0)
   ui_steps      (0.1, 0.50)
 
@@ -107,8 +107,8 @@ property_int (depth2, _("Faint plastic depth"), 20.0)
 
 property_int (smoothall, _("Mean Curvature smooth everything"), 2)
    description (_("Apply Gimp's Mean Curvature Blur filter on everything."))
-   value_range (1, 6)
-   ui_range    (1, 6)
+   value_range (0, 6)
+   ui_range    (0, 6)
    ui_gamma    (3.0)
 
 #else
