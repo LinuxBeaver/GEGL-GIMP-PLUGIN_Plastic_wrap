@@ -189,13 +189,13 @@ normal = gegl_node_new_child (gegl,
 
 /*If you are interested in developing GEGL plugins pay attention to how the same gegl:nop node (idref) is used 3 times to match the gegl syntax on the top of the page. nop is both the id and ref */
   gegl_node_link_many (input, idref, over, normal, mcb, sl, output, NULL);
-  gegl_node_connect_from (over, "aux", alphalockreplaceblendmode, "output");
+  gegl_node_connect (over, "aux", alphalockreplaceblendmode, "output");
   gegl_node_link_many (idref, nr, idref2, alphalockreplaceblendmode,  NULL);
   gegl_node_link_many (idref2, blur, NULL);
-  gegl_node_connect_from (alphalockreplaceblendmode, "aux", blur, "output");
-  gegl_node_connect_from (normal, "aux", emboss2, "output");
+  gegl_node_connect (alphalockreplaceblendmode, "aux", blur, "output");
+  gegl_node_connect (normal, "aux", emboss2, "output");
   gegl_node_link_many (idref, idref3, alphalockreplaceblendmode2, emboss, emboss2,  NULL);
-  gegl_node_connect_from (alphalockreplaceblendmode2, "aux", gaussian, "output");
+  gegl_node_connect (alphalockreplaceblendmode2, "aux", gaussian, "output");
   gegl_node_link_many (idref3, gaussian,  NULL);
 
  gegl_operation_meta_redirect (operation, "smoothcontent", nr, "iterations"); 
