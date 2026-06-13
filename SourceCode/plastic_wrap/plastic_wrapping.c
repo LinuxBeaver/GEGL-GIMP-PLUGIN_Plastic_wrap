@@ -16,7 +16,7 @@
  * Credit to Øyvind Kolås (pippin) for major GEGL contributions
  * 2023 Beaver, Plastic Wrap
 
-Test this plugin without installing by pasting this syntax into Gimp's GEGL graph filter.
+Test this plugin without installing by pasting this syntax into Gimpꞌs GEGL graph filter.
 This code will generate a static preview of the plugin
 
 id=x 
@@ -28,7 +28,7 @@ gimp:layer-mode layer-mode=softlight opacity=0.50 aux=[ ref=y ]
 
 --end of syntax --
 
-Fun fact, I've been wanting to make a filter like this for over a year and had some idea with my bevel fused with hard light but it was not until today (oct 3 2023) that I figured out a plastic wrap algorithm that looks good. Yes, this filter is inspired by Abobe Photoshop's plastic wrap.
+Fun fact, Iꞌve been wanting to make a filter like this for over a year and had some idea with my bevel fused with hard light but it was not until today (oct 3 2023) that I figured out a plastic wrap algorithm that looks good. Yes, this filter is inspired by Abobe Photoshopꞌs plastic wrap.
 
  */
 
@@ -39,20 +39,20 @@ Fun fact, I've been wanting to make a filter like this for over a year and had s
 
 property_double (opacity, _("Opacity of plastic"), 0.14)
    description (_("Opacity of the plastic wrap"))
-   value_range (0.10, 0.30)
+   value_range (0.10, 1.00)
    ui_range    (0.10, 0.30)
    ui_gamma    (3.0)
   ui_steps      (0.1, 0.50)
 
 
 property_int (smoothcontent, _("Smooth content below the plastic"), 3)
-   description (_("Apply Gimp's noise reduction filter on the subject/object that is inside on the plastic"))
+   description (_("Apply Gimpꞌs noise reduction filter on the subject/object that is inside on the plastic"))
    value_range (1, 10)
    ui_range    (1, 10)
    ui_gamma    (3.0)
 
 property_double (blurcontent, _("Blur content below the plastic"), 0.0)
-   description (_("Apply Gimp's gaussian blur filter on the subject/object that is inside on the plastic. At 0 this is entirely disabled."))
+   description (_("Apply Gimpꞌs gaussian blur filter on the subject/object that is inside on the plastic. At 0 this is entirely disabled."))
    value_range (0.0, 2.0)
    ui_range    (0.0, 2.0)
    ui_gamma    (3.0)
@@ -106,7 +106,7 @@ property_int (depth2, _("Faint plastic depth"), 20.0)
 
 
 property_int (smoothall, _("Mean Curvature smooth everything"), 2)
-   description (_("Apply Gimp's Mean Curvature Blur filter on everything."))
+   description (_("Apply Gimpꞌs Mean Curvature Blur filter on everything."))
    value_range (0, 6)
    ui_range    (0, 6)
    ui_gamma    (3.0)
@@ -135,7 +135,7 @@ static void attach (GeglOperation *operation)
                                   "operation", "gegl:over",
                                   NULL);
 
-/*This is a GEGL exclusive blend mode that works like Gimp's alpha lock and replace blend mode fused together. It is meant to alpha lock a gaussian blur in this case.
+/*This is a GEGL exclusive blend mode that works like Gimpꞌs alpha lock and replace blend mode fused together. It is meant to alpha lock a gaussian blur in this case.
 There is no Gimp only blend mode that does anything like this. That is what makes it unique and interesting.*/
   alphalockreplaceblendmode = gegl_node_new_child (gegl,
                                   "operation", "gegl:src-in",
